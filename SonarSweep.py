@@ -1,9 +1,11 @@
-results = open('inputSonar.txt', 'r').readlines()
+input = open('inputSonar.txt').readlines()
 
 i = 0
-a = 1
-while i < len(results):
-    if results[i] > results[i-1]:
+a = 0
+while i < len(input)-3:
+    sum1 = int(input[i]) + int(input[i + 1]) + int(input[i + 2])
+    sum2 = int(input[i + 1]) + int(input[i + 2]) + int(input[i + 3])
+    if sum2 > sum1:
         a = a + 1
     i = i + 1
 print (a)
